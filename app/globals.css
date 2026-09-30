@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Disable image dragging/saving affordances site-wide */
+img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
