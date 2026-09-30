@@ -9,12 +9,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-/**
- * Wraps the test screen with browser-level restrictions.
- * IMPORTANT: none of this can block OS-level screenshots (Print Screen / phone camera).
- * Browsers have no API for that — this only deters/detects/logs, plus a visible watermark
- * so any screenshot is traceable back to the candidate.
- */
+
 export default function AntiCheat({ candidateName, maxTabSwitches, onTabSwitchExceeded, children }: Props) {
   const [tabSwitches, setTabSwitches] = useState(0);
   const exceededRef = useRef(false);
